@@ -40,7 +40,6 @@ key = {json account key}
 password = {account password}
 infura = {infura key}
 network_id = 4 // rinkeby network id
-contract_address = {contract address}
 log_file = {log file path}
 
 // deploy command
