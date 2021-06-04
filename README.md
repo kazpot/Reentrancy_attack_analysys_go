@@ -60,11 +60,11 @@ $ go run deploy2.go
 
 ```
 // wallet1 and wallet2 both donate 1 Gwei to Charity Contract
-$ go run donate.js
+$ go run donate.go
 
 // Run wallet2 withdraw 1 time, but it runs 2 times due to re-entrancy
 // So wallet2 maliciously can get 1 GWei * 2 = 2 GWei
-$ go run exploit.js
+$ go run exploit.go
 ```
 
 ## Prevention
