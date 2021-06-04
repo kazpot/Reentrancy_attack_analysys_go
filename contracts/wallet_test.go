@@ -42,22 +42,22 @@ func TestDeployWallet(t *testing.T) {
 	}
 
 	_, err = wallet.Donate(&bind.TransactOpts{
-		From:   auth.From,
-		Signer: auth.Signer,
+		From:     auth.From,
+		Signer:   auth.Signer,
 		GasPrice: gasPrice,
 		GasLimit: 420000,
-		Value:  nil,
+		Value:    nil,
 	}, big.NewInt(2e+18))
 	if err != nil {
 		t.Fatalf("Failed to call donate: %v", err)
 	}
 
 	_, err = wallet.Withdraw(&bind.TransactOpts{
-		From:   auth.From,
-		Signer: auth.Signer,
+		From:     auth.From,
+		Signer:   auth.Signer,
 		GasPrice: gasPrice,
 		GasLimit: 420000,
-		Value:  nil,
+		Value:    nil,
 	})
 	if err != nil {
 		t.Fatalf("Failed to call withdraw: %v", err)
@@ -72,6 +72,5 @@ func TestDeployWallet(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to get donation blance from contract: %v", err)
 	}
-
 
 }

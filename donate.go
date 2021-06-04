@@ -42,11 +42,11 @@ func main() {
 	}
 
 	tx1, err := wallet1.Donate(&bind.TransactOpts{
-		From:   auth.From,
-		Signer: auth.Signer,
+		From:     auth.From,
+		Signer:   auth.Signer,
 		GasPrice: big.NewInt(100e+9),
 		GasLimit: 420000,
-		Value:  nil,
+		Value:    nil,
 	}, big.NewInt(1e+9))
 	if err != nil {
 		log.Fatalf("Failed to call donate1: %v", err)
@@ -56,11 +56,11 @@ func main() {
 	}
 
 	tx2, err := wallet2.Donate(&bind.TransactOpts{
-		From:   auth.From,
-		Signer: auth.Signer,
+		From:     auth.From,
+		Signer:   auth.Signer,
 		GasPrice: big.NewInt(100e+9),
 		GasLimit: 420000,
-		Value:  nil,
+		Value:    nil,
 	}, big.NewInt(1e+9))
 	if err != nil {
 		log.Fatalf("Failed to call donate2: %v", err)
